@@ -183,7 +183,7 @@ fDep.addEventListener('submit', async e => {
     if (!user) { showMsg(msg, 'Faça login com o Google antes de enviar.', 'e'); return; }
     btn.disabled = true; btn.textContent = 'Enviando...';
     try {
-        await db.collection('depoimentos').add({ nome, cidade, texto, nota: n, uid: user.uid, email: user.email, criadoEm: firebase.firestore.FieldValue.serverTimestamp(), aprovado: true });
+        await db.collection('depoimentos').add({ nome, cidade, texto, nota: n, uid: user.uid, email: user.email, photoURL: user.photoURL || '', criadoEm: firebase.firestore.FieldValue.serverTimestamp(), aprovado: true });
         showMsg(msg, '🌿 Depoimento enviado! Obrigada por compartilhar.', 's');
         fDep.reset(); nota = 0; hil(0);
         if (window._pixelReady) fbq('track', 'Lead');
@@ -201,7 +201,10 @@ db.collection('depoimentos').where('aprovado', '==', true).orderBy('criadoEm', '
             const d = doc.data(), est = '★'.repeat(d.nota || 5) + '☆'.repeat(5 - (d.nota || 5));
             const card = document.createElement('article');
             card.className = 'dep-card';
-            card.innerHTML = `<div class="dep-stars">${est}</div><p class="dep-text">${esc(d.texto)}</p><div class="dep-autor"><div class="dep-av">👩</div><div class="dep-info"><h4>${esc(d.nome)}</h4><span>${esc(d.cidade)}</span></div></div>`;
+            const avatarHTML = d.photoURL
+                ? `<img src="${d.photoURL}" alt="Foto de ${esc(d.nome)}" width="48" height="48" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;" onerror="this.outerHTML='<span style=\\'font-size:1.3rem\\'>👩</span>'">`
+                : `<span style="font-size:1.3rem">👩</span>`;
+            card.innerHTML = `<div class="dep-stars">${est}</div><p class="dep-text">${esc(d.texto)}</p><div class="dep-autor"><div class="dep-av">${avatarHTML}</div><div class="dep-info"><h4>${esc(d.nome)}</h4><span>${esc(d.cidade)}</span></div></div>`;
             depFB.appendChild(card);
         });
     }, err => console.error('Depoimentos:', err));

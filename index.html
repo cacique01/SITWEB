@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabriel Gatti — Esterco Turbinado Frutífera | Cuiabá e Várzea Grande</title>
-  <meta name="description" content="Adubo orgânico 100% natural para seu jardim frutífero. Esterco Turbinado Frutífera entregue em até 3 dias em Cuiabá e Várzea Grande. Sem química, sem risco."/>
-  <meta name="keywords" content="adubo orgânico Cuiabá, esterco turbinado frutífera, jardim frutífero, adubação orgânica Várzea Grande, Gabriel Gatti"/>
+  <meta name="description"
+    content="Adubo orgânico 100% natural para seu jardim frutífero. Esterco Turbinado Frutífera entregue em até 3 dias em Cuiabá e Várzea Grande. Sem química, sem risco." />
+  <meta name="keywords"
+    content="adubo orgânico Cuiabá, esterco turbinado frutífera, jardim frutífero, adubação orgânica Várzea Grande, Gabriel Gatti" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Gabriel Gatti — Seu jardim cheio de frutas, sem química"/>
-  <meta property="og:description" content="Esterco Turbinado Frutífera: adubo orgânico com entrega em até 3 dias em Cuiabá e Várzea Grande."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:title" content="Gabriel Gatti — Seu jardim cheio de frutas, sem química" />
+  <meta property="og:description"
+    content="Esterco Turbinado Frutífera: adubo orgânico com entrega em até 3 dias em Cuiabá e Várzea Grande." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Product","name":"Esterco Turbinado Frutífera — Gabriel Gatti","description":"Adubo orgânico enriquecido com nutrientes específicos para frutificação. 100% natural, sem químicos.","brand":{"@type":"Brand","name":"Gabriel Gatti"},"offers":{"@type":"AggregateOffer","priceCurrency":"BRL","lowPrice":"9.00","highPrice":"420.00","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"60"},"areaServed":["Cuiabá","Várzea Grande"]}
   </script>
 
-  <link rel="icon" href="img/logo.jpeg" type="image/x-icon"/>
+  <link rel="icon" href="img/logo.jpeg" type="image/x-icon" />
 
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
   <!-- Meta Pixel -->
-  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');window._pixelReady=false;window.initPixel=function(){if(!window._pixelReady){fbq('init','SEU_PIXEL_ID');fbq('track','PageView');window._pixelReady=true;}};</script>
+  <script>!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); window._pixelReady = false; window.initPixel = function () { if (!window._pixelReady) { fbq('init', 'SEU_PIXEL_ID'); fbq('track', 'PageView'); window._pixelReady = true; } };</script>
 
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -30,661 +34,810 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 
   <!-- Fontes: Cormorant Garamond (display cinematic) + DM Sans (body clean) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
 
 </head>
+
 <body>
 
-<!-- Custom Cursor -->
-<div id="cursor-dot" aria-hidden="true"></div>
-<div id="cursor-ring" aria-hidden="true"></div>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-<!-- Floating WhatsApp -->
-<a id="wa-float" href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+  <!-- Floating WhatsApp -->
+  <a id="wa-float" href="redirecionador/index.html" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
 
-<!-- ══════════ NAVBAR ══════════ -->
-<nav id="navbar" aria-label="Navegação principal">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo" aria-label="Gabriel Gatti — início">Gabriel Gatti</a>
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav id="navbar" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Gabriel Gatti — início">Gabriel Gatti</a>
 
-    <!-- Desktop links -->
-    <ul class="nav-links" id="nav-menu-desk">
+      <!-- Desktop links -->
+      <ul class="nav-links" id="nav-menu-desk">
+        <li><a href="#solucao">Produto</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#prova">Depoimentos</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+
+      <!-- Desktop CTA -->
+      <a href="redirecionador/index.html" target="_blank" rel="noopener" class="btn-wa nav-cta"
+        style="font-size:.82rem;padding:.55rem 1.2rem;" aria-label="Chamar no WhatsApp">💬 WhatsApp</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <ul>
       <li><a href="#solucao">Produto</a></li>
       <li><a href="#beneficios">Benefícios</a></li>
       <li><a href="#prova">Depoimentos</a></li>
       <li><a href="#precos">Preços</a></li>
       <li><a href="#faq">Dúvidas</a></li>
     </ul>
-
-    <!-- Desktop CTA -->
-    <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener"
-       class="btn-wa nav-cta" style="font-size:.82rem;padding:.55rem 1.2rem;"
-       aria-label="Chamar no WhatsApp">💬 WhatsApp</a>
-
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-drawer">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-drawer-cta">
+      <a href="redirecionador/index.html" target="_blank" rel="noopener" class="btn-wa"
+        aria-label="Pedir pelo WhatsApp">💬 Pedir pelo WhatsApp</a>
+    </div>
   </div>
-</nav>
 
-<!-- Mobile Drawer -->
-<div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <ul>
-    <li><a href="#solucao">Produto</a></li>
-    <li><a href="#beneficios">Benefícios</a></li>
-    <li><a href="#prova">Depoimentos</a></li>
-    <li><a href="#precos">Preços</a></li>
-    <li><a href="#faq">Dúvidas</a></li>
-  </ul>
-  <div class="nav-drawer-cta">
-    <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="btn-wa" aria-label="Pedir pelo WhatsApp">💬 Pedir pelo WhatsApp</a>
-  </div>
-</div>
+  <main id="conteudo-principal">
 
-<main id="conteudo-principal">
+    <!-- ══════════ 1. HERO ══════════ -->
+    <section id="hero" aria-labelledby="hero-h1">
+      <!-- WebGL Particle Canvas -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
-  <!-- ══════════ 1. HERO ══════════ -->
-  <section id="hero" aria-labelledby="hero-h1">
-    <!-- WebGL Particle Canvas -->
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="hero-inner">
 
-    <div class="container">
-      <div class="hero-inner">
-
-        <div>
-          <div class="hero-eyebrow">
-            <span class="tag">🌿 Cuiabá &amp; Várzea Grande · MT</span>
+          <div>
+            <div class="hero-eyebrow">
+              <span class="tag">🌿 Cuiabá &amp; Várzea Grande · MT</span>
+            </div>
+            <h1 class="hero-h1" id="hero-h1">
+              Seu jardim<br>
+              cheio de frutas —<br>
+              <em>sem química,<br>sem risco.</em>
+            </h1>
+            <p class="hero-sub">O Esterco Turbinado Frutífera nutre suas plantas de forma natural e segura, com entrega
+              em até 3 dias em Cuiabá e Várzea Grande.</p>
+            <div class="hero-actions">
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="btn-wa"
+                aria-label="Pedir pelo WhatsApp agora">
+                💬 Quero meu Frutífera agora
+              </a>
+              <a href="#precos" class="btn-outline">Ver preços →</a>
+            </div>
+            <div class="hero-trust" role="note">
+              <span class="hero-stars">★★★★★</span>
+              <span><strong>+60</strong> jardins transformados em Cuiabá e Várzea Grande</span>
+            </div>
           </div>
-          <h1 class="hero-h1" id="hero-h1">
-            Seu jardim<br>
-            cheio de frutas —<br>
-            <em>sem química,<br>sem risco.</em>
-          </h1>
-          <p class="hero-sub">O Esterco Turbinado Frutífera nutre suas plantas de forma natural e segura, com entrega em até 3 dias em Cuiabá e Várzea Grande.</p>
-          <div class="hero-actions">
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="btn-wa" aria-label="Pedir pelo WhatsApp agora">
-              💬 Quero meu Frutífera agora
-            </a>
-            <a href="#precos" class="btn-outline">Ver preços →</a>
+
+          <div class="hero-visual reveal-scale">
+            <div class="hero-video-wrap">
+              <!-- Vídeo real do produto -->
+              <video autoplay muted loop playsinline preload="metadata"
+                aria-label="Vídeo mostrando o Esterco Turbinado Frutífera">
+                <source src="mp4/video1.mp4" type="video/mp4">
+                <source src="mp4/video2.mp4" type="video/mp4">
+              </video>
+              <div class="hero-video-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-num">+60</div>
+                <div class="hero-stat-label">Clientes felizes</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">3</div>
+                <div class="hero-stat-label">Dias p/ entrega</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">100%</div>
+                <div class="hero-stat-label">Orgânico</div>
+              </div>
+            </div>
           </div>
-          <div class="hero-trust" role="note">
-            <span class="hero-stars">★★★★★</span>
-            <span><strong>+60</strong> jardins transformados em Cuiabá e Várzea Grande</span>
+
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 2. PROBLEMA ══════════ -->
+    <section id="problema" aria-labelledby="prob-h2">
+      <div class="container">
+        <div class="prob-grid">
+          <div class="reveal-left">
+            <span class="tag">Você conhece essa sensação?</span>
+            <h2 class="prob-titulo" id="prob-h2">
+              Você cuida, rega,<br>dedica tempo…<br>
+              <em>e a planta não<br>dá fruto nenhum.</em>
+            </h2>
+            <div class="prob-texto">
+              <p>Você já tentou de tudo. Comprou adubo na loja, seguiu dicas nas redes — e mesmo assim as plantas
+                crescem, mas as frutas não aparecem.</p>
+              <p>Ou pior: usou um produto forte demais e a planta ficou queimada. Adubos químicos mal aplicados podem
+                destruir em dias o que você levou meses para cultivar.</p>
+              <p>Cada mês sem resultado é tempo perdido e dinheiro que foi embora.</p>
+            </div>
+          </div>
+          <div class="prob-cards reveal" style="transition-delay:.15s">
+            <div class="prob-card">
+              <div class="prob-card-icon" aria-hidden="true">🌵</div>
+              <div>
+                <h4>Plantas que não frutificam</h4>
+                <p>Folhas crescem, flores aparecem e somem. Os frutos nunca chegam.</p>
+              </div>
+            </div>
+            <div class="prob-card">
+              <div class="prob-card-icon" aria-hidden="true">⚗️</div>
+              <div>
+                <h4>Medo de queimar com químico</h4>
+                <p>Adubos industriais são agressivos. Uma dose errada pode matar raízes.</p>
+              </div>
+            </div>
+            <div class="prob-card">
+              <div class="prob-card-icon" aria-hidden="true">🛒</div>
+              <div>
+                <h4>Produtos que não foram feitos para você</h4>
+                <p>Prateleiras cheias de fórmulas para lavoura — não para seu jardim em casa.</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-visual reveal-scale">
-          <div class="hero-video-wrap">
-            <!-- Vídeo real do produto -->
-            <video autoplay muted loop playsinline preload="metadata"
-                   aria-label="Vídeo mostrando o Esterco Turbinado Frutífera">
-              <source src="mp4/video1.mp4" type="video/mp4">
-              <source src="mp4/video2.mp4" type="video/mp4">
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 3. SOLUÇÃO ══════════ -->
+    <section id="solucao" aria-labelledby="sol-h2">
+      <div class="container">
+        <div class="sol-header reveal">
+          <span class="tag">A solução</span>
+          <h2 id="sol-h2">O Frutífera foi feito exatamente para o seu jardim.</h2>
+          <p>100% orgânico, enriquecido com os nutrientes certos para estimular a frutificação — sem risco de queimar
+            suas plantas.</p>
+        </div>
+
+        <!-- Galeria de fotos reais -->
+        <div class="sol-gallery reveal" id="fotos" style="transition-delay:.1s"
+          aria-label="Galeria de fotos reais do produto e resultados">
+
+          <div class="sol-photo">
+            <img src="img/img4.jpeg"
+              alt="Plantio vigoroso com Frutífera — mamoeiros e pitaias produzindo frutos em Cuiabá" loading="lazy" />
+            <div class="sol-photo-label">Resultados no campo</div>
+          </div>
+
+          <div class="sol-photo">
+            <img src="img/img1.jpeg" alt="Esterco Turbinado Frutífera — solo rico e escuro, pronto para uso"
+              loading="lazy" />
+            <div class="sol-photo-label">Solo rico e preparado</div>
+          </div>
+
+          <div class="sol-photo">
+            <img src="img/img3.jpeg"
+              alt="Gabriel Gatti com colheita abundante — abóboras enormes produzidas com adubo orgânico"
+              loading="lazy" />
+            <div class="sol-photo-label">Colheita real do cliente</div>
+          </div>
+
+          <div class="sol-photo">
+            <img src="img/img2.jpeg" alt="Mudas saudáveis e vigorosas crescidas com Frutífera" loading="lazy" />
+            <div class="sol-photo-label">Mudas vigorosas</div>
+          </div>
+
+        </div>
+
+        <!-- Como funciona -->
+        <div class="passos">
+          <div class="passo reveal" style="transition-delay:.0s">
+            <div class="passo-icon" aria-hidden="true">🛒</div>
+            <div class="passo-num" aria-hidden="true">1</div>
+            <h3>Escolha seu tamanho</h3>
+            <p>De 1&nbsp;kg a 100&nbsp;kg. Você paga só pelo que precisa.</p>
+          </div>
+          <div class="passo reveal" style="transition-delay:.12s">
+            <div class="passo-icon" aria-hidden="true">🚚</div>
+            <div class="passo-num" aria-hidden="true">2</div>
+            <h3>Receba em casa</h3>
+            <p>Entrega em até 3 dias em Cuiabá e Várzea Grande. Sem sair de casa.</p>
+          </div>
+          <div class="passo reveal" style="transition-delay:.24s">
+            <div class="passo-icon" aria-hidden="true">🌿</div>
+            <div class="passo-num" aria-hidden="true">3</div>
+            <h3>Aplique e acompanhe</h3>
+            <p>Nutrição natural que trabalha no solo. Primeiros resultados em 3 a 6 semanas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 4. BENEFÍCIOS ══════════ -->
+    <section id="beneficios" aria-labelledby="ben-h2">
+      <div class="container">
+        <div class="ben-header reveal">
+          <span class="tag">O que muda</span>
+          <h2 id="ben-h2">O que muda no seu jardim a partir da primeira aplicação</h2>
+        </div>
+        <div class="ben-grid">
+          <article class="ben-card reveal"><span class="ben-icon">🍋</span>
+            <h3>Mais frutos, de verdade</h3>
+            <p>Fórmula com nutrientes que estimulam a frutificação — não apenas o crescimento das folhas.</p>
+          </article>
+          <article class="ben-card reveal" style="transition-delay:.08s"><span class="ben-icon">🌱</span>
+            <h3>Seguro para qualquer planta</h3>
+            <p>Orgânico e equilibrado: não queima raiz, não mata o que você construiu com tempo e carinho.</p>
+          </article>
+          <article class="ben-card reveal" style="transition-delay:.16s"><span class="ben-icon">📦</span>
+            <h3>Chega em 2 a 3 dias</h3>
+            <p>Entregamos em Cuiabá e Várzea Grande. Sem sair de casa, sem esperar semanas.</p>
+          </article>
+          <article class="ben-card reveal" style="transition-delay:.24s"><span class="ben-icon">💰</span>
+            <h3>Preço acessível</h3>
+            <p>A partir de R$&nbsp;9 — menos do que um vaso novo que vai ter o mesmo problema.</p>
+          </article>
+          <article class="ben-card reveal" style="transition-delay:.32s"><span class="ben-icon">🤝</span>
+            <h3>Feito para jardins domésticos</h3>
+            <p>Formulação para quem cuida em casa — não para lavoura industrial de grande escala.</p>
+          </article>
+          <article class="ben-card reveal" style="transition-delay:.40s"><span class="ben-icon">♻️</span>
+            <h3>Bem para o planeta</h3>
+            <p>Sem agrotóxicos, sem resíduos químicos no solo da sua casa e da sua família.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 5. RESULTADOS ══════════ -->
+    <section id="atencao" aria-labelledby="atencao-h2">
+      <div class="container">
+        <div class="atencao-h reveal">
+          <span class="tag">Resultados reais</span>
+          <h2 id="atencao-h2">Veja a diferença que o Frutífera faz — em jardins reais, aqui em Cuiabá</h2>
+          <p>Números e imagens reais de quem usa e colhe.</p>
+        </div>
+
+        <!-- Vídeos reais do produto -->
+        <div class="resultado-videos reveal" aria-label="Vídeos do produto em uso">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Resultado do Frutífera — vídeo 1">
+              <source src="mp4/video3.mp4" type="video/mp4">
             </video>
-            <div class="hero-video-overlay" aria-hidden="true"></div>
+            <div class="video-card-label">Resultado real — jardim em Cuiabá</div>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="hero-stat-num">+60</div>
-              <div class="hero-stat-label">Clientes felizes</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">3</div>
-              <div class="hero-stat-label">Dias p/ entrega</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">100%</div>
-              <div class="hero-stat-label">Orgânico</div>
-            </div>
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Resultado do Frutífera — vídeo 2">
+              <source src="mp4/video4.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-label">Transformação após aplicação</div>
+          </div>
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Resultado do Frutífera — vídeo 3">
+              <source src="mp4/video5.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-label">Transformação após aplicação</div>
           </div>
         </div>
 
-      </div>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="scroll-hint" aria-hidden="true">
-      <span>scroll</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 2. PROBLEMA ══════════ -->
-  <section id="problema" aria-labelledby="prob-h2">
-    <div class="container">
-      <div class="prob-grid">
-        <div class="reveal-left">
-          <span class="tag">Você conhece essa sensação?</span>
-          <h2 class="prob-titulo" id="prob-h2">
-            Você cuida, rega,<br>dedica tempo…<br>
-            <em>e a planta não<br>dá fruto nenhum.</em>
-          </h2>
-          <div class="prob-texto">
-            <p>Você já tentou de tudo. Comprou adubo na loja, seguiu dicas nas redes — e mesmo assim as plantas crescem, mas as frutas não aparecem.</p>
-            <p>Ou pior: usou um produto forte demais e a planta ficou queimada. Adubos químicos mal aplicados podem destruir em dias o que você levou meses para cultivar.</p>
-            <p>Cada mês sem resultado é tempo perdido e dinheiro que foi embora.</p>
-          </div>
-        </div>
-        <div class="prob-cards reveal" style="transition-delay:.15s">
-          <div class="prob-card">
-            <div class="prob-card-icon" aria-hidden="true">🌵</div>
-            <div>
-              <h4>Plantas que não frutificam</h4>
-              <p>Folhas crescem, flores aparecem e somem. Os frutos nunca chegam.</p>
+        <!-- Slider Antes/Depois -->
+        <div class="slider-wrap reveal" style="transition-delay:.1s">
+          <p class="slider-titulo" aria-hidden="true">← Arraste para comparar →</p>
+          <div class="before-after" id="slider-ba" role="img"
+            aria-label="Comparação antes e depois do uso do Frutífera">
+            <div class="ba-before" aria-hidden="true">
+              🌵<span class="ba-label antes">Antes</span>
+            </div>
+            <div class="ba-after" id="ba-after" aria-hidden="true">
+              🌳<span class="ba-label depois">Depois</span>
+            </div>
+            <div class="ba-divisor" id="ba-divisor" aria-hidden="true">
+              <div class="ba-handle">⟺</div>
             </div>
           </div>
-          <div class="prob-card">
-            <div class="prob-card-icon" aria-hidden="true">⚗️</div>
-            <div>
-              <h4>Medo de queimar com químico</h4>
-              <p>Adubos industriais são agressivos. Uma dose errada pode matar raízes.</p>
-            </div>
+          <p class="slider-hint" aria-hidden="true">🖱️ Clique e arraste o divisor para ver a transformação</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 6. DEPOIMENTOS ══════════ -->
+    <section id="prova" aria-labelledby="prova-h2">
+      <div class="container">
+        <div class="prova-h reveal">
+          <span class="tag">Quem já testou</span>
+          <h2 id="prova-h2">O que clientes de Cuiabá e Várzea Grande estão colhendo</h2>
+          <p>Depoimentos reais de quem usou e transformou o jardim.</p>
+        </div>
+
+        <!-- Firebase depoimentos em tempo real -->
+        <div id="depoimentos-firebase" aria-label="Depoimentos enviados por clientes" aria-live="polite"></div>
+
+        <!-- Formulário de depoimento -->
+        <div class="form-dep-wrap reveal">
+          <h3>✍️ Você é cliente? Conta pra gente!</h3>
+          <p>Compartilhe sua experiência e ajude outras pessoas a transformarem o jardim delas.</p>
+
+          <div id="login-status" aria-live="polite">
+            <p style="font-size:.88rem;color:var(--txt-secondary);margin-bottom:1rem">
+              Entre com sua conta Google para enviar um depoimento verificado.
+            </p>
+            <button id="btn-login" class="btn-solid" aria-label="Entrar com Google">
+              🔒 Entrar com Google para comentar
+            </button>
           </div>
-          <div class="prob-card">
-            <div class="prob-card-icon" aria-hidden="true">🛒</div>
-            <div>
-              <h4>Produtos que não foram feitos para você</h4>
-              <p>Prateleiras cheias de fórmulas para lavoura — não para seu jardim em casa.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 3. SOLUÇÃO ══════════ -->
-  <section id="solucao" aria-labelledby="sol-h2">
-    <div class="container">
-      <div class="sol-header reveal">
-        <span class="tag">A solução</span>
-        <h2 id="sol-h2">O Frutífera foi feito exatamente para o seu jardim.</h2>
-        <p>100% orgânico, enriquecido com os nutrientes certos para estimular a frutificação — sem risco de queimar suas plantas.</p>
-      </div>
-
-      <!-- Galeria de fotos reais -->
-      <div class="sol-gallery reveal" id="fotos" style="transition-delay:.1s" aria-label="Galeria de fotos reais do produto e resultados">
-
-        <div class="sol-photo">
-          <img src="img/img4.jpeg"
-               alt="Plantio vigoroso com Frutífera — mamoeiros e pitaias produzindo frutos em Cuiabá"
-               loading="lazy"/>
-          <div class="sol-photo-label">Resultados no campo</div>
-        </div>
-
-        <div class="sol-photo">
-          <img src="img/img1.jpeg"
-               alt="Esterco Turbinado Frutífera — solo rico e escuro, pronto para uso"
-               loading="lazy"/>
-          <div class="sol-photo-label">Solo rico e preparado</div>
-        </div>
-
-        <div class="sol-photo">
-          <img src="img/img3.jpeg"
-               alt="Gabriel Gatti com colheita abundante — abóboras enormes produzidas com adubo orgânico"
-               loading="lazy"/>
-          <div class="sol-photo-label">Colheita real do cliente</div>
-        </div>
-
-        <div class="sol-photo">
-          <img src="img/img2.jpeg"
-               alt="Mudas saudáveis e vigorosas crescidas com Frutífera"
-               loading="lazy"/>
-          <div class="sol-photo-label">Mudas vigorosas</div>
-        </div>
-
-      </div>
-
-      <!-- Como funciona -->
-      <div class="passos">
-        <div class="passo reveal" style="transition-delay:.0s">
-          <div class="passo-icon" aria-hidden="true">🛒</div>
-          <div class="passo-num" aria-hidden="true">1</div>
-          <h3>Escolha seu tamanho</h3>
-          <p>De 1&nbsp;kg a 100&nbsp;kg. Você paga só pelo que precisa.</p>
-        </div>
-        <div class="passo reveal" style="transition-delay:.12s">
-          <div class="passo-icon" aria-hidden="true">🚚</div>
-          <div class="passo-num" aria-hidden="true">2</div>
-          <h3>Receba em casa</h3>
-          <p>Entrega em até 3 dias em Cuiabá e Várzea Grande. Sem sair de casa.</p>
-        </div>
-        <div class="passo reveal" style="transition-delay:.24s">
-          <div class="passo-icon" aria-hidden="true">🌿</div>
-          <div class="passo-num" aria-hidden="true">3</div>
-          <h3>Aplique e acompanhe</h3>
-          <p>Nutrição natural que trabalha no solo. Primeiros resultados em 3 a 6 semanas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 4. BENEFÍCIOS ══════════ -->
-  <section id="beneficios" aria-labelledby="ben-h2">
-    <div class="container">
-      <div class="ben-header reveal">
-        <span class="tag">O que muda</span>
-        <h2 id="ben-h2">O que muda no seu jardim a partir da primeira aplicação</h2>
-      </div>
-      <div class="ben-grid">
-        <article class="ben-card reveal"><span class="ben-icon">🍋</span><h3>Mais frutos, de verdade</h3><p>Fórmula com nutrientes que estimulam a frutificação — não apenas o crescimento das folhas.</p></article>
-        <article class="ben-card reveal" style="transition-delay:.08s"><span class="ben-icon">🌱</span><h3>Seguro para qualquer planta</h3><p>Orgânico e equilibrado: não queima raiz, não mata o que você construiu com tempo e carinho.</p></article>
-        <article class="ben-card reveal" style="transition-delay:.16s"><span class="ben-icon">📦</span><h3>Chega em 2 a 3 dias</h3><p>Entregamos em Cuiabá e Várzea Grande. Sem sair de casa, sem esperar semanas.</p></article>
-        <article class="ben-card reveal" style="transition-delay:.24s"><span class="ben-icon">💰</span><h3>Preço acessível</h3><p>A partir de R$&nbsp;9 — menos do que um vaso novo que vai ter o mesmo problema.</p></article>
-        <article class="ben-card reveal" style="transition-delay:.32s"><span class="ben-icon">🤝</span><h3>Feito para jardins domésticos</h3><p>Formulação para quem cuida em casa — não para lavoura industrial de grande escala.</p></article>
-        <article class="ben-card reveal" style="transition-delay:.40s"><span class="ben-icon">♻️</span><h3>Bem para o planeta</h3><p>Sem agrotóxicos, sem resíduos químicos no solo da sua casa e da sua família.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 5. RESULTADOS ══════════ -->
-  <section id="atencao" aria-labelledby="atencao-h2">
-    <div class="container">
-      <div class="atencao-h reveal">
-        <span class="tag">Resultados reais</span>
-        <h2 id="atencao-h2">Veja a diferença que o Frutífera faz — em jardins reais, aqui em Cuiabá</h2>
-        <p>Números e imagens reais de quem usa e colhe.</p>
-      </div>
-
-      <!-- Contadores -->
-      <div class="contadores" role="list" aria-label="Estatísticas">
-        <div class="cont-card reveal" role="listitem">
-          <div class="cont-num" data-alvo="60" aria-label="+60 jardins transformados">0</div>
-          <div class="cont-label">jardins transformados</div>
-        </div>
-        <div class="cont-card reveal" role="listitem" style="transition-delay:.1s">
-          <div class="cont-num" data-alvo="3" data-pref="até " data-suf=" dias" aria-label="Entrega em até 3 dias">0</div>
-          <div class="cont-label">para entrega em MT</div>
-        </div>
-        <div class="cont-card reveal" role="listitem" style="transition-delay:.2s">
-          <div class="cont-num" data-alvo="100" data-suf="%" aria-label="100% orgânico">0</div>
-          <div class="cont-label">orgânico e natural</div>
-        </div>
-      </div>
-
-      <!-- Vídeos reais do produto -->
-      <div class="resultado-videos reveal" aria-label="Vídeos do produto em uso">
-        <div class="video-card">
-          <video autoplay muted loop playsinline preload="metadata" aria-label="Resultado do Frutífera — vídeo 1">
-            <source src="WhatsApp_Video_2026-05-04_at_10_32_19.mp4" type="video/mp4">
-          </video>
-          <div class="video-card-label">Resultado real — jardim em Cuiabá</div>
-        </div>
-        <div class="video-card">
-          <video autoplay muted loop playsinline preload="metadata" aria-label="Resultado do Frutífera — vídeo 2">
-            <source src="WhatsApp_Video_2026-05-04_at_10_32_19__1_.mp4" type="video/mp4">
-          </video>
-          <div class="video-card-label">Transformação após aplicação</div>
-        </div>
-      </div>
-
-      <!-- Slider Antes/Depois -->
-      <div class="slider-wrap reveal" style="transition-delay:.1s">
-        <p class="slider-titulo" aria-hidden="true">← Arraste para comparar →</p>
-        <div class="before-after" id="slider-ba" role="img" aria-label="Comparação antes e depois do uso do Frutífera">
-          <div class="ba-before" aria-hidden="true">
-            🌵<span class="ba-label antes">Antes</span>
-          </div>
-          <div class="ba-after" id="ba-after" aria-hidden="true">
-            🌳<span class="ba-label depois">Depois</span>
-          </div>
-          <div class="ba-divisor" id="ba-divisor" aria-hidden="true">
-            <div class="ba-handle">⟺</div>
-          </div>
-        </div>
-        <p class="slider-hint" aria-hidden="true">🖱️ Clique e arraste o divisor para ver a transformação</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 6. DEPOIMENTOS ══════════ -->
-  <section id="prova" aria-labelledby="prova-h2">
-    <div class="container">
-      <div class="prova-h reveal">
-        <span class="tag">Quem já testou</span>
-        <h2 id="prova-h2">O que clientes de Cuiabá e Várzea Grande estão colhendo</h2>
-        <p>Depoimentos reais de quem usou e transformou o jardim.</p>
-      </div>
-
-      <div class="dep-grid" aria-label="Depoimentos de clientes">
-        <article class="dep-card reveal">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">[INSERIR DEPOIMENTO REAL AQUI — ex: "Meu limoeiro não dava fruto há 2 anos. Depois de um mês com o Frutífera, já apareceram mais de 20 limões!"]</p>
-          <div class="dep-autor">
-            <div class="dep-av">👩</div>
-            <div class="dep-info"><h4>[Nome completo]</h4><span>[Bairro], Cuiabá — MT</span></div>
-          </div>
-        </article>
-        <article class="dep-card reveal" style="transition-delay:.1s">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">[INSERIR DEPOIMENTO REAL AQUI — ex: "Usei no meu maracujazeiro e em 40 dias estava cheio de flores e frutos. Produto incrível!"]</p>
-          <div class="dep-autor">
-            <div class="dep-av">👩</div>
-            <div class="dep-info"><h4>[Nome completo]</h4><span>[Bairro], Várzea Grande — MT</span></div>
-          </div>
-        </article>
-        <article class="dep-card reveal" style="transition-delay:.2s">
-          <div class="dep-stars">★★★★★</div>
-          <p class="dep-text">[INSERIR DEPOIMENTO REAL AQUI — ex: "Entregaram em 2 dias, produto fresquinho. Minhas plantas nunca estiveram tão saudáveis!"]</p>
-          <div class="dep-autor">
-            <div class="dep-av">👩</div>
-            <div class="dep-info"><h4>[Nome completo]</h4><span>[Bairro], Cuiabá — MT</span></div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Firebase depoimentos em tempo real -->
-      <div id="depoimentos-firebase" aria-label="Depoimentos enviados por clientes" aria-live="polite"></div>
-
-      <!-- Formulário de depoimento -->
-      <div class="form-dep-wrap reveal">
-        <h3>✍️ Você é cliente? Conta pra gente!</h3>
-        <p>Compartilhe sua experiência e ajude outras pessoas a transformarem o jardim delas.</p>
-
-        <div id="login-status" aria-live="polite">
-          <p style="font-size:.88rem;color:var(--txt-secondary);margin-bottom:1rem">
-            Entre com sua conta Google para enviar um depoimento verificado.
-          </p>
-          <button id="btn-login" class="btn-solid" aria-label="Entrar com Google">
-            🔒 Entrar com Google para comentar
-          </button>
-        </div>
-
-        <form class="form-dep" id="form-dep" style="display:none" novalidate aria-label="Formulário de depoimento">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="dep-nome">Seu nome *</label>
-              <input type="text" id="dep-nome" required autocomplete="name" placeholder="Maria Silva" aria-required="true"/>
+          <form class="form-dep" id="form-dep" style="display:none" novalidate aria-label="Formulário de depoimento">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="dep-nome">Seu nome *</label>
+                <input type="text" id="dep-nome" required autocomplete="name" placeholder="Maria Silva"
+                  aria-required="true" />
+              </div>
+              <div class="form-field">
+                <label for="dep-cidade">Cidade e bairro *</label>
+                <input type="text" id="dep-cidade" required placeholder="Jardim das Flores, Cuiabá"
+                  aria-required="true" />
+              </div>
             </div>
             <div class="form-field">
-              <label for="dep-cidade">Cidade e bairro *</label>
-              <input type="text" id="dep-cidade" required placeholder="Jardim das Flores, Cuiabá" aria-required="true"/>
+              <label>Avaliação *</label>
+              <div class="estrelas-input" role="group" aria-label="Selecione de 1 a 5 estrelas">
+                <button type="button" data-v="1" aria-label="1 estrela" class="estrela-btn">★</button>
+                <button type="button" data-v="2" aria-label="2 estrelas" class="estrela-btn">★</button>
+                <button type="button" data-v="3" aria-label="3 estrelas" class="estrela-btn">★</button>
+                <button type="button" data-v="4" aria-label="4 estrelas" class="estrela-btn">★</button>
+                <button type="button" data-v="5" aria-label="5 estrelas" class="estrela-btn">★</button>
+              </div>
+              <input type="hidden" id="dep-nota" value="0" />
             </div>
-          </div>
-          <div class="form-field">
-            <label>Avaliação *</label>
-            <div class="estrelas-input" role="group" aria-label="Selecione de 1 a 5 estrelas">
-              <button type="button" data-v="1" aria-label="1 estrela" class="estrela-btn">★</button>
-              <button type="button" data-v="2" aria-label="2 estrelas" class="estrela-btn">★</button>
-              <button type="button" data-v="3" aria-label="3 estrelas" class="estrela-btn">★</button>
-              <button type="button" data-v="4" aria-label="4 estrelas" class="estrela-btn">★</button>
-              <button type="button" data-v="5" aria-label="5 estrelas" class="estrela-btn">★</button>
+            <div class="form-field">
+              <label for="dep-texto">Seu depoimento *</label>
+              <textarea id="dep-texto" required
+                placeholder="Conte o que mudou no seu jardim depois de usar o Frutífera..."
+                aria-required="true"></textarea>
             </div>
-            <input type="hidden" id="dep-nota" value="0"/>
-          </div>
-          <div class="form-field">
-            <label for="dep-texto">Seu depoimento *</label>
-            <textarea id="dep-texto" required placeholder="Conte o que mudou no seu jardim depois de usar o Frutífera..." aria-required="true"></textarea>
-          </div>
-          <p class="lgpd-aviso">🔒 Seus dados são armazenados com criptografia no Firebase (Google Cloud), em conformidade com a <a href="#politica">LGPD</a>. Seu e-mail nunca será exibido publicamente.</p>
-          <div id="dep-msg" class="form-msg-dep" role="alert" aria-live="assertive"></div>
-          <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
-            <button type="submit" class="btn-solid" aria-label="Enviar depoimento">🌿 Enviar meu depoimento</button>
-            <button type="button" id="btn-logout" style="background:none;border:none;cursor:none;font-size:.8rem;color:var(--txt-muted);font-family:var(--font-body)" aria-label="Sair da conta">Sair →</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 7. PREÇOS ══════════ -->
-  <section id="precos" aria-labelledby="prec-h2">
-    <div class="container">
-      <div class="prec-h reveal">
-        <span class="tag">Investimento</span>
-        <h2 id="prec-h2">Escolha o tamanho certo para o seu jardim</h2>
-        <p>Dois produtos, seis tamanhos, um objetivo: seu jardim cheio de vida e frutos.</p>
-      </div>
-
-      <div class="prec-toggle" role="tablist" aria-label="Selecionar linha de produto">
-        <button class="tog-btn ativo" id="tab-frut" role="tab" aria-selected="true" aria-controls="panel-frut">🌳 Frutífera — Premium</button>
-        <button class="tog-btn" id="tab-com" role="tab" aria-selected="false" aria-controls="panel-com">🌿 Turbinado Comum</button>
-      </div>
-
-      <!-- FRUTÍFERA — preços do flyer: 1kg R$12, 4kg R$35 -->
-      <div class="tab-prec visivel" id="panel-frut" role="tabpanel" aria-labelledby="tab-frut">
-        <div class="prec-grid">
-          <div class="prec-card reveal">
-            <div class="prec-kg">1 kg</div>
-            <div class="prec-uso">1 a 2 vasos</div>
-            <div class="prec-valor"><span>R$</span> 12</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card reveal" style="transition-delay:.08s">
-            <div class="prec-kg">4 kg</div>
-            <div class="prec-uso">Jardim pequeno</div>
-            <div class="prec-valor"><span>R$</span> 35</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card destaque reveal" style="transition-delay:.16s">
-            <div class="prec-badge">⭐ Popular</div>
-            <div class="prec-kg">20 kg</div>
-            <div class="prec-uso">Jardim médio</div>
-            <div class="prec-valor"><span>R$</span> 120</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card reveal" style="transition-delay:.24s">
-            <div class="prec-kg">30 kg</div>
-            <div class="prec-uso">Jardim grande</div>
-            <div class="prec-valor"><span>R$</span> 190</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card reveal" style="transition-delay:.32s">
-            <div class="prec-kg">50 kg</div>
-            <div class="prec-uso">Horta + jardim</div>
-            <div class="prec-valor"><span>R$</span> 290</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card reveal" style="transition-delay:.40s">
-            <div class="prec-kg">100 kg</div>
-            <div class="prec-uso">Produção doméstica</div>
-            <div class="prec-valor"><span>R$</span> 420</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- COMUM — preços do flyer: 1kg R$9, 4kg R$25, 50kg R$270, 100kg R$400 -->
-      <div class="tab-prec" id="panel-com" role="tabpanel" aria-labelledby="tab-com">
-        <div class="prec-grid">
-          <div class="prec-card">
-            <div class="prec-kg">1 kg</div>
-            <div class="prec-uso">Plantas ornamentais</div>
-            <div class="prec-valor"><span>R$</span> 9</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card">
-            <div class="prec-kg">4 kg</div>
-            <div class="prec-uso">Canteiro pequeno</div>
-            <div class="prec-valor"><span>R$</span> 25</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card">
-            <div class="prec-kg">20 kg</div>
-            <div class="prec-uso">Jardim médio</div>
-            <div class="prec-valor"><span>R$</span> 100</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card">
-            <div class="prec-kg">30 kg</div>
-            <div class="prec-uso">Jardim grande</div>
-            <div class="prec-valor"><span>R$</span> 170</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card">
-            <div class="prec-kg">50 kg</div>
-            <div class="prec-uso">Área ampla</div>
-            <div class="prec-valor"><span>R$</span> 270</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-          <div class="prec-card">
-            <div class="prec-kg">100 kg</div>
-            <div class="prec-uso">Produção doméstica</div>
-            <div class="prec-valor"><span>R$</span> 400</div>
-            <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="prec-cta-wrap reveal">
-        <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="btn-wa" style="font-size:1.05rem;padding:1rem 2.4rem">
-          💬 Quero pedir pelo WhatsApp — rápido e sem complicação
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 8. FAQ ══════════ -->
-  <section id="faq" aria-labelledby="faq-h2">
-    <div class="container">
-      <div class="faq-h reveal">
-        <span class="tag">Dúvidas frequentes</span>
-        <h2 id="faq-h2">Suas dúvidas respondidas de forma direta</h2>
-      </div>
-      <div class="faq-list" role="list">
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr1" id="fq1">Funciona para qualquer planta frutífera?<span class="faq-icon">+</span></button><div class="faq-a" id="fr1" role="region" aria-labelledby="fq1" hidden><p>O Turbinado Frutífera foi formulado para plantas que produzem frutos: limoeiros, mangueiras, maracujazeiros, tomateiros, pimenteiras e outras. Para ornamentais, a linha Comum atende melhor.</p></div></div>
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr2" id="fq2">Em quanto tempo vejo resultado?<span class="faq-icon">+</span></button><div class="faq-a" id="fr2" role="region" aria-labelledby="fq2" hidden><p>Os primeiros sinais aparecem entre 3 a 6 semanas após a aplicação correta. Cada planta tem seu ritmo, mas nossos clientes já relatam diferença visível no primeiro mês.</p></div></div>
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr3" id="fq3">É seguro para crianças e pets?<span class="faq-icon">+</span></button><div class="faq-a" id="fr3" role="region" aria-labelledby="fq3" hidden><p>Sim. Por ser 100% orgânico, não contém agrotóxicos. Recomendamos aplicar e deixar o solo absorver antes de crianças e pets circularem na área.</p></div></div>
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr4" id="fq4">Como faço o pedido e como pago?<span class="faq-icon">+</span></button><div class="faq-a" id="fr4" role="region" aria-labelledby="fq4" hidden><p>O pedido é feito direto pelo WhatsApp — rápido e sem formulário. Pagamento via Pix, transferência ou dinheiro na entrega, combinado na conversa.</p></div></div>
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr5" id="fq5">Realmente entrega em 2 a 3 dias?<span class="faq-icon">+</span></button><div class="faq-a" id="fr5" role="region" aria-labelledby="fq5" hidden><p>Sim, para Cuiabá e Várzea Grande. Pedidos confirmados até o meio-dia costumam sair no mesmo dia.</p></div></div>
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr6" id="fq6">Posso usar se nunca usei adubo antes?<span class="faq-icon">+</span></button><div class="faq-a" id="fr6" role="region" aria-labelledby="fq6" hidden><p>Pode sim. O produto vem com orientação de uso e nossa equipe tira dúvidas pelo WhatsApp antes, durante e depois da aplicação.</p></div></div>
-        <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr7" id="fq7">Qual a diferença entre Comum e Frutífera?<span class="faq-icon">+</span></button><div class="faq-a" id="fr7" role="region" aria-labelledby="fq7" hidden><p>O Frutífera tem maior concentração de nutrientes para frutificação (fósforo e potássio). O Comum é ideal para crescimento e folhagem. Se quer colher frutos, o Frutífera é a escolha certa.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 9. OFERTA ══════════ -->
-  <section id="oferta" aria-labelledby="oferta-h2">
-    <div class="container">
-      <div class="oferta-inner">
-        <div class="reveal-left">
-          <span class="tag">O que você leva</span>
-          <h2 class="oferta-titulo" id="oferta-h2">Tudo que você precisa para um jardim <em>frutífero de verdade</em></h2>
-          <ul class="oferta-lista" aria-label="O que está incluído">
-            <li><span class="oferta-check">✓</span>Adubo 100% orgânico, sem químicos que queimam plantas</li>
-            <li><span class="oferta-check">✓</span>Fórmula Frutífera enriquecida para estimular a frutificação</li>
-            <li><span class="oferta-check">✓</span>Entrega em 2 a 3 dias em Cuiabá e Várzea Grande</li>
-            <li><span class="oferta-check">✓</span>Atendimento personalizado pelo WhatsApp</li>
-            <li><span class="oferta-check">✓</span>Disponível de 1&nbsp;kg a 100&nbsp;kg</li>
-            <li><span class="oferta-check">✓</span>Produção local, de quem conhece o solo do Mato Grosso</li>
-          </ul>
-        </div>
-        <div class="oferta-card reveal" style="transition-delay:.15s">
-          <!-- Foto do Gabriel com a colheita -->
-          <div style="border-radius:16px;overflow:hidden;margin-bottom:1.5rem;border:1px solid var(--border-subtle)">
-            <img src="img/img1.jpeg" alt="Gabriel Gatti com colheita abundante — resultado real do Frutífera" style="width:100%;display:block;filter:brightness(.9) saturate(1.1)" loading="lazy"/>
-          </div>
-          <h3>🌿 Pronto para começar?</h3>
-          <p>Mande uma mensagem agora — em minutos seu pedido já está encaminhado. Sem formulário, sem espera.</p>
-          <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="btn-wa" style="width:100%;justify-content:center">💬 Falar com Gabriel Gatti agora</a>
-          <p style="margin-top:.8rem;font-size:.75rem;color:var(--txt-muted)">📞 (65) 99345-0411 · (65) 99623-9650</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-line" aria-hidden="true"></div>
-
-  <!-- ══════════ 10. CTA FINAL ══════════ -->
-  <section id="cta-final" aria-labelledby="cta-h2">
-    <div class="container reveal">
-      <span class="tag">Último chamado</span>
-      <h2 class="cta-h2" id="cta-h2">Seu jardim pode estar cheio<br>de frutos em poucas semanas.</h2>
-      <p class="cta-sub">Mande uma mensagem agora — em menos de 1 minuto você já tem seu pedido encaminhado.</p>
-      <div class="cta-actions">
-        <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener"
-           class="btn-wa" style="font-size:1.1rem;padding:1.1rem 2.6rem">
-          💬 Falar com Gabriel Gatti no WhatsApp agora
-        </a>
-        <div style="width:100%;max-width:500px">
-          <p style="font-size:.88rem;color:var(--txt-secondary);margin-bottom:.8rem">📧 Quer receber dicas de jardim e ofertas exclusivas?</p>
-          <form class="email-form" id="form-email" novalidate aria-label="Cadastro de e-mail">
-            <label for="email-in" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Seu melhor e-mail</label>
-            <input type="email" id="email-in" placeholder="Seu melhor e-mail" required aria-required="true" autocomplete="email"/>
-            <button type="submit">Quero receber</button>
+            <p class="lgpd-aviso">🔒 Seus dados são armazenados com criptografia no Firebase (Google Cloud), em
+              conformidade com a <a href="#politica">LGPD</a>. Seu e-mail nunca será exibido publicamente.</p>
+            <div id="dep-msg" class="form-msg-dep" role="alert" aria-live="assertive"></div>
+            <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+              <button type="submit" class="btn-solid" aria-label="Enviar depoimento">🌿 Enviar meu depoimento</button>
+              <button type="button" id="btn-logout"
+                style="background:none;border:none;cursor:none;font-size:.8rem;color:var(--txt-muted);font-family:var(--font-body)"
+                aria-label="Sair da conta">Sair →</button>
+            </div>
           </form>
-          <p class="email-lgpd">🔒 Sem spam. Conforme a <a href="#politica">LGPD</a>.</p>
-          <p id="email-msg" role="alert" aria-live="assertive"></p>
-        </div>
-        <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" class="insta-link">
-          📸 Ver resultados reais no Instagram →
-        </a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ══════════ FOOTER ══════════ -->
-<footer role="contentinfo" id="politica">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h3>Gabriel Gatti</h3>
-        <p>Adubo orgânico feito com cuidado para transformar jardins em Cuiabá e Várzea Grande — Mato Grosso.</p>
-        <p style="margin-top:.5rem;font-size:.82rem;color:var(--verde-vivo)">📞 (65) 99345-0411 · (65) 99623-9650</p>
-        <div class="footer-social" aria-label="Redes sociais">
-          <a href="#fotos" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
-          <a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
         </div>
       </div>
-      <nav class="footer-col" aria-label="Links rápidos">
-        <h4>Links rápidos</h4>
-        <ul>
-          <li><a href="#solucao">O Produto</a></li>
-          <li><a href="#beneficios">Benefícios</a></li>
-          <li><a href="#prova">Depoimentos</a></li>
-          <li><a href="#precos">Preços</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
-        </ul>
-      </nav>
-      <nav class="footer-col" aria-label="Institucional">
-        <h4>Institucional</h4>
-        <ul>
-          <li><a href="#politica">Política de Privacidade</a></li>
-          <li><a href="#politica">Termos de Uso</a></li>
-          <li><a href="REDIRECIONADOR/index.html" target="_blank" rel="noopener">Contato</a></li>
-          <li><address style="font-style:normal;font-size:.82rem;color:var(--txt-muted)">📍 Cuiabá / Várzea Grande — MT</address></li>
-        </ul>
-      </nav>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 7. PREÇOS ══════════ -->
+    <section id="precos" aria-labelledby="prec-h2">
+      <div class="container">
+        <div class="prec-h reveal">
+          <span class="tag">Investimento</span>
+          <h2 id="prec-h2">Escolha o tamanho certo para o seu jardim</h2>
+          <p>Dois produtos, seis tamanhos, um objetivo: seu jardim cheio de vida e frutos.</p>
+        </div>
+
+        <div class="prec-toggle" role="tablist" aria-label="Selecionar linha de produto">
+          <button class="tog-btn ativo" id="tab-frut" role="tab" aria-selected="true" aria-controls="panel-frut">🌳
+            Frutífera — Premium</button>
+          <button class="tog-btn" id="tab-com" role="tab" aria-selected="false" aria-controls="panel-com">🌿 Turbinado
+            Comum</button>
+        </div>
+
+        <!-- FRUTÍFERA — preços do flyer: 1kg R$12, 4kg R$35 -->
+        <div class="tab-prec visivel" id="panel-frut" role="tabpanel" aria-labelledby="tab-frut">
+          <div class="prec-grid">
+            <div class="prec-card reveal">
+              <div class="prec-kg">1 kg</div>
+              <div class="prec-uso">1 a 2 vasos</div>
+              <div class="prec-valor"><span>R$</span> 12</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card reveal" style="transition-delay:.08s">
+              <div class="prec-kg">4 kg</div>
+              <div class="prec-uso">Jardim pequeno</div>
+              <div class="prec-valor"><span>R$</span> 35</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card destaque reveal" style="transition-delay:.16s">
+              <div class="prec-badge">⭐ Popular</div>
+              <div class="prec-kg">20 kg</div>
+              <div class="prec-uso">Jardim médio</div>
+              <div class="prec-valor"><span>R$</span> 120</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card reveal" style="transition-delay:.24s">
+              <div class="prec-kg">30 kg</div>
+              <div class="prec-uso">Jardim grande</div>
+              <div class="prec-valor"><span>R$</span> 190</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card reveal" style="transition-delay:.32s">
+              <div class="prec-kg">50 kg</div>
+              <div class="prec-uso">Horta + jardim</div>
+              <div class="prec-valor"><span>R$</span> 290</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card reveal" style="transition-delay:.40s">
+              <div class="prec-kg">100 kg</div>
+              <div class="prec-uso">Produção doméstica</div>
+              <div class="prec-valor"><span>R$</span> 420</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMUM — preços do flyer: 1kg R$9, 4kg R$25, 50kg R$270, 100kg R$400 -->
+        <div class="tab-prec" id="panel-com" role="tabpanel" aria-labelledby="tab-com">
+          <div class="prec-grid">
+            <div class="prec-card">
+              <div class="prec-kg">1 kg</div>
+              <div class="prec-uso">Plantas ornamentais</div>
+              <div class="prec-valor"><span>R$</span> 9</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card">
+              <div class="prec-kg">4 kg</div>
+              <div class="prec-uso">Canteiro pequeno</div>
+              <div class="prec-valor"><span>R$</span> 25</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card">
+              <div class="prec-kg">20 kg</div>
+              <div class="prec-uso">Jardim médio</div>
+              <div class="prec-valor"><span>R$</span> 100</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card">
+              <div class="prec-kg">30 kg</div>
+              <div class="prec-uso">Jardim grande</div>
+              <div class="prec-valor"><span>R$</span> 170</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card">
+              <div class="prec-kg">50 kg</div>
+              <div class="prec-uso">Área ampla</div>
+              <div class="prec-valor"><span>R$</span> 270</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+            <div class="prec-card">
+              <div class="prec-kg">100 kg</div>
+              <div class="prec-uso">Produção doméstica</div>
+              <div class="prec-valor"><span>R$</span> 400</div>
+              <a href="redirecionador/index.html" target="_blank" rel="noopener" class="prec-cta-wa">Pedir pelo
+                WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prec-cta-wrap reveal">
+          <a href="redirecionador/index.html" target="_blank" rel="noopener" class="btn-wa"
+            style="font-size:1.05rem;padding:1rem 2.4rem">
+            💬 Quero pedir pelo WhatsApp — rápido e sem complicação
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 8. FAQ ══════════ -->
+    <section id="faq" aria-labelledby="faq-h2">
+      <div class="container">
+        <div class="faq-h reveal">
+          <span class="tag">Dúvidas frequentes</span>
+          <h2 id="faq-h2">Suas dúvidas respondidas de forma direta</h2>
+        </div>
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr1"
+              id="fq1">Funciona para qualquer planta frutífera?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr1" role="region" aria-labelledby="fq1" hidden>
+              <p>O Turbinado Frutífera foi formulado para plantas que produzem frutos: limoeiros, mangueiras,
+                maracujazeiros, tomateiros, pimenteiras e outras. Para ornamentais, a linha Comum atende melhor.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr2"
+              id="fq2">Em quanto tempo vejo resultado?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr2" role="region" aria-labelledby="fq2" hidden>
+              <p>Os primeiros sinais aparecem entre 3 a 6 semanas após a aplicação correta. Cada planta tem seu ritmo,
+                mas nossos clientes já relatam diferença visível no primeiro mês.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr3"
+              id="fq3">É seguro para crianças e pets?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr3" role="region" aria-labelledby="fq3" hidden>
+              <p>Sim. Por ser 100% orgânico, não contém agrotóxicos. Recomendamos aplicar e deixar o solo absorver antes
+                de crianças e pets circularem na área.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr4"
+              id="fq4">Como faço o pedido e como pago?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr4" role="region" aria-labelledby="fq4" hidden>
+              <p>O pedido é feito direto pelo WhatsApp — rápido e sem formulário. Pagamento via Pix, transferência ou
+                dinheiro na entrega, combinado na conversa.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr5"
+              id="fq5">Realmente entrega em 2 a 3 dias?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr5" role="region" aria-labelledby="fq5" hidden>
+              <p>Sim, para Cuiabá e Várzea Grande. Pedidos confirmados até o meio-dia costumam sair no mesmo dia.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr6"
+              id="fq6">Como usar o adubo se nunca usei antes?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr6" role="region" aria-labelledby="fq6" hidden>
+              <p>
+                O produto vem com orientação de uso e nossa equipe tira dúvidas pelo WhatsApp antes, durante
+                e depois da aplicação.
+                Mas, para ver um vídeo rápido de como aplicar, <a href="como usar/index.html" target="_blank" rel="noopener" style="color: rgb(7, 100, 0);">clique
+                  aqui</a>.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false" aria-controls="fr7"
+              id="fq7">Qual a diferença entre Comum e Frutífera?<span class="faq-icon">+</span></button>
+            <div class="faq-a" id="fr7" role="region" aria-labelledby="fq7" hidden>
+              <p>O Frutífera tem maior concentração de nutrientes para frutificação (fósforo e potássio). O Comum é
+                ideal para crescimento e folhagem. Se quer colher frutos, o Frutífera é a escolha certa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 9. OFERTA ══════════ -->
+    <section id="oferta" aria-labelledby="oferta-h2">
+      <div class="container">
+        <div class="oferta-inner">
+          <div class="reveal-left">
+            <span class="tag">O que você leva</span>
+            <h2 class="oferta-titulo" id="oferta-h2">Tudo que você precisa para um jardim <em>frutífero de verdade</em>
+            </h2>
+            <ul class="oferta-lista" aria-label="O que está incluído">
+              <li><span class="oferta-check">✓</span>Adubo 100% orgânico, sem químicos que queimam plantas</li>
+              <li><span class="oferta-check">✓</span>Fórmula Frutífera enriquecida para estimular a frutificação</li>
+              <li><span class="oferta-check">✓</span>Entrega em 2 a 3 dias em Cuiabá e Várzea Grande</li>
+              <li><span class="oferta-check">✓</span>Atendimento personalizado pelo WhatsApp</li>
+              <li><span class="oferta-check">✓</span>Disponível de 1&nbsp;kg a 100&nbsp;kg</li>
+              <li><span class="oferta-check">✓</span>Produção local, de quem conhece o solo do Mato Grosso</li>
+            </ul>
+          </div>
+          <div class="oferta-card reveal" style="transition-delay:.15s">
+            <!-- Foto do Gabriel com a colheita -->
+            <div style="border-radius:16px;overflow:hidden;margin-bottom:1.5rem;border:1px solid var(--border-subtle)">
+              <img src="img/img1.jpeg" alt="Gabriel Gatti com colheita abundante — resultado real do Frutífera"
+                style="width:100%;display:block;filter:brightness(.9) saturate(1.1)" loading="lazy" />
+            </div>
+            <h3>🌿 Pronto para começar?</h3>
+            <p>Mande uma mensagem agora — em minutos seu pedido já está encaminhado. Sem formulário, sem espera.</p>
+            <a href="redirecionador/index.html" target="_blank" rel="noopener" class="btn-wa"
+              style="width:100%;justify-content:center">💬 Falar com Gabriel Gatti agora</a>
+            <p style="margin-top:.8rem;font-size:.75rem;color:var(--txt-muted)">📞 (65) 99345-0411 · (65) 99623-9650</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-line" aria-hidden="true"></div>
+
+    <!-- ══════════ 10. CTA FINAL ══════════ -->
+    <section id="cta-final" aria-labelledby="cta-h2">
+      <div class="container reveal">
+        <span class="tag">Último chamado</span>
+        <h2 class="cta-h2" id="cta-h2">Seu jardim pode estar cheio<br>de frutos em poucas semanas.</h2>
+        <p class="cta-sub">Mande uma mensagem agora — em menos de 1 minuto você já tem seu pedido encaminhado.</p>
+        <div class="cta-actions">
+          <a href="redirecionador/index.html" target="_blank" rel="noopener" class="btn-wa"
+            style="font-size:1.1rem;padding:1.1rem 2.6rem">
+            💬 Falar com Gabriel Gatti no WhatsApp agora
+          </a>
+          <a href="https://www.instagram.com/esterco_turbinado/" target="_blank" rel="noopener" class="insta-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 6px;">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0-3.403 2.759-6.162 6.162-6.162s6.162 2.759 6.162 6.162c0 3.403-2.759 6.162-6.162 6.162s-6.162-2.759-6.162-6.162zm2.889 0c0 1.821 1.453 3.273 3.273 3.273s3.273-1.452 3.273-3.273c0-1.82-1.452-3.273-3.273-3.273s-3.273 1.453-3.273 3.273zm11.294-6.468c0 .795.645 1.44 1.44 1.44s1.44-.645 1.44-1.44-.645-1.44-1.44-1.44-1.44.645-1.44 1.44z"/>
+            </svg>
+            Ver resultados reais no Instagram →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer role="contentinfo" id="politica">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Gabriel Gatti</h3>
+          <p>Adubo orgânico feito com cuidado para transformar jardins em Cuiabá e Várzea Grande — Mato Grosso.</p>
+          <p style="margin-top:.5rem;font-size:.82rem;color:var(--verde-vivo)">📞 (65) 99345-0411 · (65) 99623-9650</p>
+          <div class="footer-social" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/esterco_turbinado/" target="_blank" rel="noopener" class="insta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0-3.403 2.759-6.162 6.162-6.162s6.162 2.759 6.162 6.162c0 3.403-2.759 6.162-6.162 6.162s-6.162-2.759-6.162-6.162zm2.889 0c0 1.821 1.453 3.273 3.273 3.273s3.273-1.452 3.273-3.273c0-1.82-1.452-3.273-3.273-3.273s-3.273 1.453-3.273 3.273zm11.294-6.468c0 .795.645 1.44 1.44 1.44s1.44-.645 1.44-1.44-.645-1.44-1.44-1.44-1.44.645-1.44 1.44z"/>
+            </svg>
+          </a>
+            <a href="redirecionador/index.html" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-label="Links rápidos">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="#solucao">O Produto</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#prova">Depoimentos</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Institucional">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#politica">Política de Privacidade</a></li>
+            <li><a href="#politica">Termos de Uso</a></li>
+            <li><a href="redirecionador/index.html" target="_blank" rel="noopener">Contato</a></li>
+            <li>
+              <address style="font-style:normal;font-size:.82rem;color:var(--txt-muted)">📍 Cuiabá / Várzea Grande — MT
+              </address>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Gabriel Gatti Adubos. Todos os direitos reservados.</p>
+        <p><a href="#politica">Privacidade</a> · <a href="#politica">Termos</a> · <a
+            href="redirecionador/index.html">Contato</a></p>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Gabriel Gatti Adubos. Todos os direitos reservados.</p>
-      <p><a href="#politica">Privacidade</a> · <a href="#politica">Termos</a> · <a href="REDIRECIONADOR/index.html">Contato</a></p>
+  </footer>
+
+  <!-- MODAL POLÍTICA DE PRIVACIDADE -->
+  <div id="modal-politica" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-titulo">Política de Privacidade</h2>
+        <button class="modal-close" id="modal-close-btn" aria-label="Fechar modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <h3>1. Informações que Coletamos</h3>
+        <p>Coletamos informações que você fornece voluntariamente, como nome, e-mail, telefone e endereço. Também coletamos dados técnicos de navegação (cookies, IP, dispositivo) para melhorar sua experiência.</p>
+
+        <h3>2. Como Usamos Seus Dados</h3>
+        <p>Seus dados são utilizados para:</p>
+        <ul>
+          <li>Processar pedidos de produtos</li>
+          <li>Enviar informações sobre o Frutífera</li>
+          <li>Responder suas dúvidas via WhatsApp</li>
+          <li>Melhorar nosso site e serviços</li>
+          <li>Cumprir obrigações legais (LGPD)</li>
+        </ul>
+
+        <h3>3. Compartilhamento de Dados</h3>
+        <p>Não compartilhamos seus dados com terceiros. Seus dados são armazenados com segurança no Firebase (Google Cloud) e são confidenciais.</p>
+
+        <h3>4. Segurança dos Dados</h3>
+        <p>Utilizamos criptografia e protocolos de segurança para proteger suas informações. O Firebase mantém a conformidade com LGPD e padrões internacionais de segurança.</p>
+
+        <h3>5. Seus Direitos</h3>
+        <p>Conforme a LGPD, você tem direito a:</p>
+        <ul>
+          <li>Acessar seus dados</li>
+          <li>Corrigir dados incorretos</li>
+          <li>Solicitar exclusão de dados</li>
+          <li>Revogar consentimento a qualquer momento</li>
+        </ul>
+
+        <h3>6. Cookies</h3>
+        <p>Usamos cookies para rastrear navegação e melhorar sua experiência. Você pode recusar cookies, mas alguns recursos do site podem não funcionar corretamente.</p>
+
+        <h3>7. Contato</h3>
+        <p>Para dúvidas sobre privacidade, entre em contato via WhatsApp: <strong>(65) 99345-0411</strong></p>
+
+        <h3>8. Alterações na Política</h3>
+        <p>Esta política pode ser atualizada. Mudanças significativas serão notificadas nesta página.</p>
+
+        <p style="margin-top: 2rem; text-align: center; color: var(--txt-muted); font-size: 0.9rem;">
+          <strong>Última atualização:</strong> 23 de maio de 2026
+        </p>
+      </div>
     </div>
   </div>
-</footer>
 
-<!-- COOKIE BANNER LGPD -->
-<div id="cookie-banner" role="dialog" aria-modal="false" aria-label="Aviso de cookies" aria-describedby="cookie-txt">
-  <p id="cookie-txt">🍪 Usamos cookies e o Meta Pixel para melhorar sua experiência. Ao aceitar, você concorda com nossa <a href="#politica">Política de Privacidade</a> conforme a <strong>LGPD</strong>.</p>
-  <div class="cookie-btns">
-    <button class="cookie-btn cookie-recusar" id="cookie-recusar">Recusar</button>
-    <button class="cookie-btn cookie-aceitar" id="cookie-aceitar">Aceitar</button>
+  <!-- COOKIE BANNER LGPD -->
+  <div id="cookie-banner" role="dialog" aria-modal="false" aria-label="Aviso de cookies" aria-describedby="cookie-txt">
+    <p id="cookie-txt">🍪 Usamos cookies e o Meta Pixel para melhorar sua experiência. Ao aceitar, você concorda com
+      nossa <a href="javascript:void(0)" onclick="abrirModal()">Política de Privacidade</a> conforme a <strong>LGPD</strong>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-btn cookie-recusar" id="cookie-recusar">Recusar</button>
+      <button class="cookie-btn cookie-aceitar" id="cookie-aceitar">Aceitar</button>
+    </div>
   </div>
-</div>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Controlar modal da Política de Privacidade
+    const modal = document.getElementById('modal-politica');
+    const closeBtn = document.getElementById('modal-close-btn');
+
+    function abrirModal() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    closeBtn.addEventListener('click', fecharModal);
+    
+    // Fechar ao clicar fora do modal
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        fecharModal();
+      }
+    });
+
+    // Fechar com Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        fecharModal();
+      }
+    });
+
+    // Vincular todos os links de Política
+    document.querySelectorAll('a[href="#politica"]').forEach(link => {
+      link.href = 'javascript:void(0)';
+      link.onclick = abrirModal;
+    });
+  </script>
 
 </body>
+
 </html>
