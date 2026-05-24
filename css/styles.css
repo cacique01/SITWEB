@@ -7,8 +7,8 @@
 
 :root {
     /* — Base escura Lusion-style — */
-    --bg-void: #080c08;
-    --bg-deep: #0d140d;
+    --bg-void: #112311;
+    --bg-deep: #142714;
     --bg-surface: #111a11;
     --bg-raised: #162016;
     --bg-card: #1a271a;
@@ -93,6 +93,18 @@ body {
     cursor: none;
     /* custom cursor */
     -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+iframe,
+embed,
+object,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ── GRAIN TEXTURE OVERLAY (Lusion signature) ── */
@@ -714,6 +726,7 @@ p {
     .hero-inner {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+        align-items: stretch;
     }
 
     .hero-visual {
@@ -722,6 +735,22 @@ p {
 
     .hero-sub {
         max-width: 100%;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-actions .btn-wa,
+    .hero-actions .btn-outline {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .hero-trust {
+        justify-content: center;
+        text-align: center;
     }
 }
 
