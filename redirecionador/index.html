@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Gatti – Atendimento</title>
+  <link rel="icon" href="img/logo.jpeg" type="image/jpeg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+<div class="page">
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <div class="logo-placeholder">
+      <img src="img/logo.jpeg" alt="Logo de Gabriel Gatti" />
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <div class="heading">
+    <h1>Para um <span>atendimento</span><br>especializado</h1>
+  </div>
+  <p class="subhead">Escolha como prefere nos contatar 👇</p>
+
+  <!-- Cards -->
+  <div class="cards">
+
+    <!-- Grupo WhatsApp -->
+    <a class="card card-group" href="https://chat.whatsapp.com/Fe9wBdswLH93xeq5B9gq2z" target="_blank" rel="noopener">
+      <div class="wa-icon">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2.667C8.636 2.667 2.667 8.636 2.667 16c0 2.347.633 4.64 1.836 6.653L2.667 29.333l6.88-1.8A13.267 13.267 0 0 0 16 29.333c7.364 0 13.333-5.969 13.333-13.333S23.364 2.667 16 2.667zm0 24c-2.145 0-4.24-.573-6.067-1.657l-.433-.253-4.08 1.067 1.093-3.973-.28-.453A10.6 10.6 0 0 1 5.333 16c0-5.88 4.787-10.667 10.667-10.667S26.667 10.12 26.667 16 21.88 26.667 16 26.667zm5.853-7.947c-.32-.16-1.893-.933-2.187-1.04-.293-.107-.507-.16-.72.16-.213.32-.827 1.04-.987 1.24-.16.2-.32.227-.64.08-.32-.16-1.36-.5-2.587-1.6-.96-.853-1.6-1.907-1.787-2.227-.187-.32-.013-.493.147-.653.16-.133.32-.347.48-.52.16-.173.213-.293.32-.507.107-.213.053-.4-.027-.56-.08-.16-.72-1.733-.987-2.373-.253-.613-.52-.52-.72-.533h-.613c-.213 0-.56.08-.853.4-.293.32-1.12 1.093-1.12 2.667s1.147 3.093 1.307 3.307c.16.213 2.253 3.44 5.467 4.827.76.333 1.36.533 1.827.68.76.24 1.467.213 2.013.133.613-.093 1.893-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.293-.213-.613-.373z"/>
+        </svg>
+      </div>
+      <div class="card-text">
+        <div class="card-label">Comunidade</div>
+        <div class="card-title">Entre em nosso grupo</div>
+        <div class="card-desc">Grupo oficial no WhatsApp</div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+
+    <!-- Divider -->
+    <div class="divider">ou</div>
+
+    <!-- Atendimento direto -->
+    <div class="card card-chat" style="flex-direction:column; align-items:stretch; cursor:default;" onclick="togglePhones(event)">
+      <div style="display:flex; align-items:center; gap:18px; cursor:pointer;">
+        <div class="ph-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <div class="card-label">Atendimento direto</div>
+          <div class="card-title">Fale com nosso atendimento</div>
+          <div class="card-desc">Toque para ver os contatos</div>
+        </div>
+        <div class="arrow" id="arrow-phones">›</div>
+      </div>
+
+      <!-- Phone options -->
+      <div class="phone-picker" id="phonePicker">
+        <a class="phone-btn" href="https://wa.me/556593501333" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="#25d366"><path d="M16 2.667C8.636 2.667 2.667 8.636 2.667 16c0 2.347.633 4.64 1.836 6.653L2.667 29.333l6.88-1.8A13.267 13.267 0 0 0 16 29.333c7.364 0 13.333-5.969 13.333-13.333S23.364 2.667 16 2.667zm0 24c-2.145 0-4.24-.573-6.067-1.657l-.433-.253-4.08 1.067 1.093-3.973-.28-.453A10.6 10.6 0 0 1 5.333 16c0-5.88 4.787-10.667 10.667-10.667S26.667 10.12 26.667 16 21.88 26.667 16 26.667zm5.853-7.947c-.32-.16-1.893-.933-2.187-1.04-.293-.107-.507-.16-.72.16-.213.32-.827 1.04-.987 1.24-.16.2-.32.227-.64.08-.32-.16-1.36-.5-2.587-1.6-.96-.853-1.6-1.907-1.787-2.227-.187-.32-.013-.493.147-.653.16-.133.32-.347.48-.52.16-.173.213-.293.32-.507.107-.213.053-.4-.027-.56-.08-.16-.72-1.733-.987-2.373-.253-.613-.52-.52-.72-.533h-.613c-.213 0-.56.08-.853.4-.293.32-1.12 1.093-1.12 2.667s1.147 3.093 1.307 3.307c.16.213 2.253 3.44 5.467 4.827.76.333 1.36.533 1.827.68.76.24 1.467.213 2.013.133.613-.093 1.893-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.293-.213-.613-.373z"/></svg>
+          <span>+55 65 9350-1333</span>
+          <small>Atendente</small>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">© 2026 Gabriel Gatti · Todos os direitos reservados</div>
+
+</div>
+
+<script>
+  function togglePhones(e) {
+    const picker = document.getElementById('phonePicker');
+    const arrow  = document.getElementById('arrow-phones');
+    const open   = picker.classList.toggle('open');
+    arrow.style.transform = open ? 'rotate(90deg)' : '';
+    arrow.style.transition = 'transform .25s ease';
+  }
+</script>
+</body>
+</html>
