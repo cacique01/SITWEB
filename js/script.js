@@ -1,4 +1,5 @@
 // ── FIREBASE ──
+//Pontos de melhoria
 const firebaseConfig = {
     apiKey: "AIzaSyBaEobszaTJm36eIQDbMQqHtVsb0sNJgKk",
     authDomain: "dados-clientes-5f935.firebaseapp.com",
@@ -9,6 +10,7 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore(), auth = firebase.auth(), gprov = new firebase.auth.GoogleAuthProvider();
+// Fim pontos de melhoria
 
 // ── CUSTOM CURSOR ──
 const dot = document.getElementById('cursor-dot'), ring = document.getElementById('cursor-ring');
