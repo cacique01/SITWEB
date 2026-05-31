@@ -650,6 +650,7 @@ p {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom, transparent 50%, rgba(8, 12, 8, .8) 100%);
+    pointer-events: none;
 }
 
 .hero-stats {
